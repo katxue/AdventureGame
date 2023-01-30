@@ -1,0 +1,337 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int splitpath;
+    char bridge;
+    int weight;
+    int dog;
+    int weightrand;
+    srand(time(NULL));
+    weightrand = rand() % 10 + 1;
+    int man;
+    int manaction;
+    int swordaction;
+    int concedeorbeg;
+    int swordaction2;
+    int warriorask;
+    int warriorask2;
+    int fightorrun;
+    double height;
+    
+    
+    cout<<"Welcome to adventure game. You come across a split in your path. "
+    "Press '1' to go left. Press '2' to go right.\n";
+    cin >> splitpath;
+    while (splitpath != 1 && splitpath != 2){
+        cout<<"'1' to go left. Press '2' to go right.\n";
+    cin >> splitpath;
+        
+    }
+    
+    if (splitpath == 1)
+    {
+        cout << "You have chosen to go left. You come across a man on the road. "
+        "Press '1' to talk to him. Press '2' to ignore.\n";
+        cin >> man;
+            if (man==1)
+            {
+                cout << "The man turns out to be a warrior in disguise! "
+                "Press '1' to pull out your sword. Press '2' to reason with him.\n";
+                cin >> manaction;
+                    if (manaction ==1)
+                    {
+                        cout << "The warrior pulls out his sword as well. "
+                        "Press '1' to swing. Press '2' to block.\n";
+                        cin >> swordaction;
+                            if (swordaction ==1)
+                            {
+                                cout << "The warrior stabs you before you can swing. "
+                                "Press '1' to concede. Press '2' to beg for help.\n";
+                                cin >> concedeorbeg;
+                                    if (concedeorbeg ==1)
+                                    {
+                                        cout << "The warrior chooses to take mercy on you. "
+                                        "You have lived to tell the tale.\n";
+                                        return(0);
+
+                                    }
+                                    else if (concedeorbeg == 2)
+                                        cout << "The warrior does not like beggars. You lose.\n";
+                                        return(0);
+
+                                
+                            }
+                            else if (swordaction == 2)
+                                cout << "You block the warrior's swing. "
+                                "Press '1' to swing. Press '2' to block.\n";
+                                cin >> swordaction2;
+                                    if (swordaction2 == 1){
+                                        cout << "You slay the warrior and make it home. You win.\n";
+                                        return(0);
+                                    }
+                                    else if (swordaction2==2)
+                                        cout << "Your block doesn't work this time. You lose.\n";
+                                        return(0);
+                        
+                    }
+                            
+                    else if (manaction ==2)
+                        cout << "You tell him you are harmless and just want to pass. The warrior asks for gold. "
+                        "Press '1' to give him gold. Press '2' to walk away.\n";
+                        cin >> warriorask;
+                            if (warriorask ==1)
+                            {
+                                cout << "He accepts the gold and lets you pass. You come across a bridge and must "
+                                "attempt to cross. Enter your weight 1-10.\n";
+                                cin >> weight;
+                                    if ((weightrand+weight) % 2 ==0)
+                                    {
+                                        cout << "The bridge has failed. You fall into the river and lose.\n";
+                                        return(0);
+                                    }
+                                        else
+                                        cout << "The bridge carries your weight. You make it home safe.\n";
+                                        return(0);
+                                
+                            }
+                            else if (warriorask==2)
+                                cout << "The warrior will not let you pass and draws his sword. "
+                                "Press '1' to fight. Press '2' to run.\n";
+                                cin >> fightorrun;
+                                    if (fightorrun == 1)
+                                    {
+                                        cout << "You fight and it does not go your way. You lose.\n";
+                                        return(0);
+                                    }
+                                    else if (fightorrun==2)
+                                        cout << "You run all the way home and live to tell the tale.\n";
+                                        return(0);
+            }
+            if (man==2)
+            {
+                cout << "The man doesn't want to be ignored and reveals himself as a warrior! "
+                "Press '1' to draw your sword. Press '2' to reason with him.\n";
+                cin >> manaction;
+                    if (manaction ==1)
+                    {
+                        cout << "The warrior pulls out his sword as well. "
+                        "Press '1' to swing. Press '2' to block.\n";
+                        cin >> swordaction;
+                            if (swordaction ==1)
+                            {
+                                cout << "The warrior stabs you before you can swing. "
+                                "Press '1' to concede. Press '2' to beg for help.\n";
+                                cin >> concedeorbeg;
+                                    if (concedeorbeg ==1)
+                                    {
+                                        cout << "The warrior chooses to take mercy on you. "
+                                        "You have lived to tell the tale.\n";
+                                        return(0);
+                                    }
+                                    else if (concedeorbeg == 2)
+                                        cout << "The warrior does not like beggars. You lose.\n";
+                                        return(0);
+                                
+                            }
+                            else if (swordaction == 2)
+                                cout << "You block the warrior's swing. Press '1' to swing. "
+                                "Press '2' to block.\n";
+                                cin >> swordaction2;
+                                    if (swordaction2 == 1){
+                                        cout << "You slay the warrior and make it home. You win.\n";
+                                        return(0);
+                                    }
+                                    else if (swordaction2==2)
+                                        cout << "Your block doesn't work this time. You lose.\n";
+                                        return(0);
+                        
+                    }
+                            
+                    else if (manaction ==2)
+                        cout << "You tell him you are harmless and just want to pass. "
+                        "The warrior asks for gold. Press '1' to give him gold. Press '2' to walk away.\n";
+                        cin >> warriorask;
+                            if (warriorask ==1)
+                            {
+                                cout << "He accepts the gold and lets you pass. "
+                                "You come across a bridge and must attempt to cross. Enter your weight 1-10.\n";
+                                cin >> weight;
+                                    if ((weightrand+weight) % 2 ==0)
+                                    {
+                                        cout << "The bridge has failed. You fall into the river and lose.\n";
+                                        return(0);
+                                    }
+                                        else
+                                        cout << "The bridge carries your weight. You make it home safe.\n";
+                                        return(0);
+                                
+                            }
+                            else if (warriorask==2)
+                                cout << "The warrior will not let you pass and draws his sword. "
+                                "Press '1' to fight. Press '2' to run.\n";
+                                cin >> fightorrun;
+                                    if (fightorrun == 1)
+                                    {
+                                        cout << "You fight and it does not go your way. You lose.\n";
+                                        return(0);
+                                    }
+                                    else if (fightorrun==2)
+                                        cout << "You run all the way home and live to tell the tale.\n";
+                                        return(0);
+            }
+    }
+    if (splitpath == 2)
+    {
+        cout << "You have chosen to go right. You come across a man on the road. "
+        "Press '1' to talk to him. Press '2' to ignore.\n";
+        cin >> man;
+            if (man==1)
+            {
+                cout << "The man turns out to be a warrior in disguise! "
+                "Press '1' to pull out your sword. Press '2' to reason with him.\n";
+                cin >> manaction;
+                    if (manaction ==1)
+                    {
+                        cout << "The warrior pulls out his sword as well. "
+                        "Press '1' to swing. Press '2' to block.\n";
+                        cin >> swordaction;
+                            if (swordaction ==1)
+                            {
+                                cout << "The warrior stabs you before you can swing. "
+                                "Press '1' to concede. Press '2' to beg for help.\n";
+                                cin >> concedeorbeg;
+                                    if (concedeorbeg ==1)
+                                    {
+                                        cout << "The warrior chooses to take mercy on you. You have lived to tell the tale.\n";
+                                        return(0);
+
+                                    }
+                                    else if (concedeorbeg == 2)
+                                        cout << "The warrior does not like beggars. You lose.\n";
+                                        return(0);
+
+                                
+                            }
+                            else if (swordaction == 2)
+                                cout << "You block the warrior's swing. Press '1' to swing. Press '2' to block.\n";
+                                cin >> swordaction2;
+                                    if (swordaction2 == 1){
+                                        cout << "You slay the warrior and make it home. You win.\n";
+                                        return(0);
+                                    }
+                                    else if (swordaction2==2)
+                                        cout << "Your block doesn't work this time. You lose.\n";
+                                        return(0);
+                        
+                    }
+                            
+                    else if (manaction ==2)
+                        cout << "You tell him you are harmless and just want to pass. "
+                        "The warrior asks for gold. Press '1' to give him gold. Press '2' to walk away.\n";
+                        cin >> warriorask;
+                            if (warriorask ==1)
+                            {
+                                cout << "He accepts the gold and lets you pass. "
+                                "You come across a bridge and must attempt to cross. Enter your weight 1-10.\n";
+                                cin >> weight;
+                                    if ((weightrand+weight) % 2 ==0)
+                                    {
+                                        cout << "The bridge has failed. You fall into the river and lose.\n";
+                                        return(0);
+                                    }
+                                        else
+                                        cout << "The bridge carries your weight. You make it home safe.\n";
+                                        return(0);
+                                
+                            }
+                            else if (warriorask==2)
+                                cout << "The warrior will not let you pass and draws his sword. "
+                                "Press '1' to fight. Press '2' to run.\n";
+                                cin >> fightorrun;
+                                    if (fightorrun == 1)
+                                    {
+                                        cout << "You fight and it does not go your way. You lose.\n";
+                                        return(0);
+                                    }
+                                    else if (fightorrun==2)
+                                        cout << "You run all the way home and live to tell the tale.\n";
+                                        return(0);
+            }
+            if (man==2)
+            {
+                cout << "The man doesn't want to be ignored and reveals himself as a warrior! "
+                "Press '1' to draw your sword. Press '2' to reason with him.\n";
+                cin >> manaction;
+                    if (manaction ==1)
+                    {
+                        cout << "The warrior pulls out his sword as well. "
+                        "Press '1' to swing. Press '2' to block.\n";
+                        cin >> swordaction;
+                            if (swordaction ==1)
+                            {
+                                cout << "The warrior stabs you before you can swing. "
+                                "Press '1' to concede. Press '2' to beg for help.\n";
+                                cin >> concedeorbeg;
+                                    if (concedeorbeg ==1)
+                                    {
+                                        cout << "The warrior chooses to take mercy on you. "
+                                        "You have lived to tell the tale.\n";
+                                        return(0);
+                                    }
+                                    else if (concedeorbeg == 2)
+                                        cout << "The warrior does not like beggars. You lose.\n";
+                                        return(0);
+                                
+                            }
+                            else if (swordaction == 2)
+                                cout << "You block the warrior's swing. Press '1' to swing. "
+                                "Press '2' to block.\n";
+                                cin >> swordaction2;
+                                    if (swordaction2 == 1)
+                                    {
+                                        cout << "You slay the warrior and make it home. You win.\n";
+                                        return(0);
+                                    }
+                                    else if (swordaction2==2)
+                                        cout << "Your block doesn't work this time. You lose.\n";
+                                        return(0);
+                        
+                    }
+                            
+                    else if (manaction ==2)
+                        cout << "You tell him you are harmless and just want to pass. "
+                        "The warrior asks for gold. Press '1' to give him gold. Press '2' to walk away.\n";
+                        cin >> warriorask;
+                            if (warriorask ==1)
+                            {
+                                cout << "He accepts the gold and lets you pass. "
+                                "You come across a bridge and must attempt to cross. Enter your weight 1-10.\n";
+                                cin >> weight;
+                                    if ((weightrand+weight) % 2 ==0)
+                                    {
+                                        cout << "The bridge has failed. You fall into the river and lose.\n";
+                                        return(0);
+                                    }
+                                        else
+                                        cout << "The bridge carries your weight. You make it home safe.\n";
+                                        return(0);
+                                
+                            }
+                            else if (warriorask==2)
+                                cout << "The warrior will not let you pass and draws his sword. "
+                                "Enter your height in meters. \n";
+                                cin >> height;
+                                    if (height <= 1.5)
+                                    {
+                                        cout << "You fight and it does not go your way. You lose.\n";
+                                        return(0);
+                                    }
+                                    else if (height > 1.5)
+                                        cout << "You run all the way home and live to tell the tale.\n";
+                                        return(0);
+            }
+    }                                
+}
